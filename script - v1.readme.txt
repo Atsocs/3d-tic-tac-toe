@@ -1,0 +1,2 @@
+O script v1 é um backup de quando já tinha-se terminado a parte gráfica
+apenas, sem no entanto ter criado o mecanismo do jogo em si.
