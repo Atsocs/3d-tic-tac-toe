@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jogo do Velho Bonfim</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="cont" class="container">
+      <h1>Jogo do Velho Bonfim</h1>
+      <div id="options">
+        <h3>Ajustes</h3>
+        Número de Jogadores:
+        <select id="selectPlayers">
+          <option value="1">IA</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option></select
+        ><br />
+        Level da IA:
+        <select id="selectLevel">
+          <option value="1" selected>1.</option>
+          <option value="2">2.</option>
+          <option value="3">3.</option></select
+        ><br />
+
+        <p style="color: #00ccff">
+          <b>Equipe Azul: </b><input id="eqA" type="text" value="Euler" />
+        </p>
+        <p style="color: #ff9933">
+          <b>Equipe Laranja: </b><input id="eqL" type="text" value="Gauss" />
+        </p>
+        <p style="color: lime">
+          <b>Equipe Verde: </b><input id="eqV" type="text" value="Collatz" />
+        </p>
+        Número de Partidas: Melhor de
+        <select id="selectGames">
+          <option value="1">1</option>
+          <option value="3" selected>3</option>
+          <option value="5">5</option>
+          <option value="10">10</option></select
+        ><br /><br />
+        <button type="button" onclick="start();">Jogar!</button><br /><br />
+        ~ Aperte T para ver os troféus
+      </div>
+      <div>
+        <span id="score"></span>
+        <span id="processor">processing_power</span>
+      </div>
+      <br />
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
