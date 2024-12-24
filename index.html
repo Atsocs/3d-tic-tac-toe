@@ -1,98 +1,103 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-<title> Jogo do Velho Bonfim</title>
-<style>
-canvas {
-	border: 0px;
-    /*position: relative;*/
-	margin: auto;
-}
-.container {
-       margin: 0 auto;
-	   width: 100%;
-   }
-span {
-    position: relative;
-	width: 20%;
-	font-size: 21px;
-    cursor: pointer;
-}
+  <head>
+    <title>Jogo do Velho Bonfim</title>
+    <style>
+      canvas {
+        border: 0px;
+        /*position: relative;*/
+        margin: auto;
+      }
+      .container {
+        margin: 0 auto;
+        width: 100%;
+      }
+      span {
+        position: relative;
+        width: 20%;
+        font-size: 21px;
+        cursor: pointer;
+      }
 
-div {
-	/*width: 10%;*/
-    text-align: center;
-	margin: auto;
-	font-family: monospace;
-}
+      div {
+        /*width: 10%;*/
+        text-align: center;
+        margin: auto;
+        font-family: monospace;
+      }
 
-#options {
-	display: inherit;
-	text-align: right;
-	width: 50%
-}
+      #options {
+        display: inherit;
+        text-align: right;
+        width: 50%;
+      }
 
-h1 {
-    margin-top: 10px;
-	margin-bottom: 5px;
-}
+      h1 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
 
-#processor {
-	color: #00FF00;
-	background-color: black;
-	padding: 1px;
-	font-size: 14px;
-	display: none;
-	
-}
+      #processor {
+        color: #00ff00;
+        background-color: black;
+        padding: 1px;
+        font-size: 14px;
+        display: none;
+      }
 
-button {
-	width: 110px;
-    height: 50px;
-    font-size: 24px;
-    font-family: cursive;
-    background-color: lightgoldenrodyellow;
-    border-radius: 29px;
-}
+      button {
+        width: 110px;
+        height: 50px;
+        font-size: 24px;
+        font-family: cursive;
+        background-color: lightgoldenrodyellow;
+        border-radius: 29px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cont" class="container">
+      <h1>Jogo do Velho Bonfim</h1>
+      <div id="options">
+        <h3>Ajustes</h3>
+        Número de Jogadores:
+        <select id="selectPlayers">
+          <option value="1">IA</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option></select
+        ><br />
+        Level da IA:
+        <select id="selectLevel">
+          <option value="1" selected>1.</option>
+          <option value="2">2.</option>
+          <option value="3">3.</option></select
+        ><br />
 
-</style>
-
-</head>
-<body>
-<div id ="cont" class="container">
-<h1>Jogo do Velho Bonfim</h1>
-<div id="options"><h3>Ajustes</h3>
-Número de Jogadores: 
-<select id='selectPlayers'>
-  <option value="1">IA</option>
-  <option value="2" selected>2</option>
-  <option value="3">3</option>
-</select><br/>
-Level da IA:
-<select id='selectLevel'>
-  <option value="1" selected>1.</option>
-  <option value="2">2.</option>
-  <option value="3">3.</option>
-</select><br/>
-
-<p style="color: #00ccff"><b>Equipe Azul: </b><input id="eqA" type="text" value="Euler"></p>
-<p style="color: #ff9933"><b>Equipe Laranja: </b><input id="eqL" type="text" value="Gauss"></p>
-<p style="color: lime"><b>Equipe Verde: </b><input id="eqV" type="text" value="Collatz"></p>
-Número de Partidas: Melhor de
-<select id='selectGames'>
-  <option value="1">1</option>
-  <option value="3" selected>3</option>
-  <option value="5">5</option>
-  <option value="10">10</option>
-</select><br/><br/>
-<button type="button" onclick="start();">Jogar!</button><br/><br/>
-~ Aperte T para ver os troféus
-</div>
-<div>
-<span id='score'></span>
-<span id='processor'>processing_power</span>
-</div><br/>
-<!--<div>
+        <p style="color: #00ccff">
+          <b>Equipe Azul: </b><input id="eqA" type="text" value="Euler" />
+        </p>
+        <p style="color: #ff9933">
+          <b>Equipe Laranja: </b><input id="eqL" type="text" value="Gauss" />
+        </p>
+        <p style="color: lime">
+          <b>Equipe Verde: </b><input id="eqV" type="text" value="Collatz" />
+        </p>
+        Número de Partidas: Melhor de
+        <select id="selectGames">
+          <option value="1">1</option>
+          <option value="3" selected>3</option>
+          <option value="5">5</option>
+          <option value="10">10</option></select
+        ><br /><br />
+        <button type="button" onclick="start();">Jogar!</button><br /><br />
+        ~ Aperte T para ver os troféus
+      </div>
+      <div>
+        <span id="score"></span>
+        <span id="processor">processing_power</span>
+      </div>
+      <br />
+      <!--<div>
 <span class="down button" onclick="down();">Q</span>
 <span class="front button" onclick="front();">W</span>
 <span class="up button" onclick="up();">E</span><br/>
@@ -104,9 +109,8 @@ Número de Partidas: Melhor de
 </div>
 <canvas id="myCanvas" width="0" height="0" style="border:0px solid #d3d3d3;">
 Your browser does not support the HTML5 canvas tag.</canvas>-->
-</div>
+    </div>
 
-<script type="text/javascript" src="script.js" ></script>
-<script>
-</body>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>
